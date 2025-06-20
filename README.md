@@ -1,6 +1,6 @@
 # 🌦️ App del Clima
 
-Una aplicación web sencilla que permite consultar el clima actual de cualquier ciudad del mundo. Utiliza la API de OpenWeatherMap, muestra el clima automáticamente según la ubicación del usuario, y guarda un historial de búsquedas en el navegador usando **localStorage**.
+Una aplicación web sencilla que permite consultar el clima actual de cualquier ciudad del mundo. Utiliza la API de OpenWeatherMap, muestra el clima automáticamente según la ubicación del usuario.
 
 ## 🚀 Características
 
