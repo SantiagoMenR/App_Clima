@@ -9,10 +9,15 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>App Consulta del Clima</h1>
+            <div class="header-top">
+                <h1>App Consulta del Clima</h1>
+                <button id="theme-toggle" class="theme-toggle" title="Cambiar tema">
+                    <span class="theme-icon"></span>
+                </button>
+            </div>
             <p>Ingrese el nombre de la ciudad para obtener el clima</p>
             <input type="text" id="city" placeholder="Ciudad">
-            <button id="btn" onclick="mostrarResultado()">Consultar</button>
+            <button id="btn" onclick="mostrarResultado()" class="btn-consultar">Consultar</button>
         </div>
         
         <div class="result">

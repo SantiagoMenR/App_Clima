@@ -109,6 +109,42 @@ function obtenerUbicacionUsuario() {
     }
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    buscarClimaAutomaticamente();
-  });
+// Funciones para el manejo del tema
+function getCurrentTheme() {
+  return localStorage.getItem('theme') || 'light';
+}
+
+function setTheme(theme) {
+  if (theme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+  }
+  localStorage.setItem('theme', theme);
+}
+
+function toggleTheme() {
+  const currentTheme = getCurrentTheme();
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+  setTheme(newTheme);
+}
+
+function initializeTheme() {
+  const savedTheme = getCurrentTheme();
+  setTheme(savedTheme);
+}
+
+// Event listeners
+document.addEventListener("DOMContentLoaded", () => {
+  // Inicializar tema
+  initializeTheme();
+  
+  // Configurar botón de cambio de tema
+  const themeToggle = document.getElementById('theme-toggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', toggleTheme);
+  }
+  
+  // Buscar clima automáticamente
+  buscarClimaAutomaticamente();
+});
